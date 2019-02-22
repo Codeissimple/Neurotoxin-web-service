@@ -5,17 +5,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template("index.html")
 
-@app.route("/elements")
+@app.route("/demo")
 
-def elements():
-    return render_template('elements.html')
+def demo():
+    return render_template("demo.html")
 
-@app.route("/generic")
-
-def generic():
-    return render_template('generic.html')
+@app.route('/demo', methods=['POST'])
+def result():
+    return 'Received !'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
