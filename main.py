@@ -12,9 +12,9 @@ def home():
 def demo():
     return render_template("demo.html")
 
-@app.route('/demo', methods=['POST'])
+@app.route('/results', methods=['POST'])
 def result():
-    return 'Received !'
+    return render_template("results.html")
 
 if __name__ == '__main__':
     app.run()
