@@ -8,11 +8,14 @@ def home():
     return render_template("index.html")
 
 @app.route("/demo")
-
 def demo():
     return render_template("demo.html")
 
-@app.route('/results', methods=['POST'])
+@app.route("/results.html")
+def results():
+    return render_template("results.html")
+
+@app.route('/results.html', methods=['POST'])
 def result():
     return render_template("results.html")
 
