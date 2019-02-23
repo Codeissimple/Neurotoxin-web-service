@@ -11,6 +11,10 @@ def home():
 def demo():
     return render_template("demo.html")
 
+@app.route('/results')
+def results():
+    return render_template("results.html")
+
 @app.route('/results', methods=['POST'])
 def results():
     return (request.form['demoform'])
