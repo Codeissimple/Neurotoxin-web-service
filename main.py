@@ -12,7 +12,7 @@ def demo():
     return render_template("demo.html")
 
 @app.route('/results', methods=['POST'])
-def addRegion():
+def results():
     return (request.form['projectFilePath'])
 
 if __name__ == '__main__':
