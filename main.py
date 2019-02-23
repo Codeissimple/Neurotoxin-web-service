@@ -17,7 +17,7 @@ def results():
 
 @app.route('/results.html', methods=['POST'])
 def result():
-    return render_template("results.html")
+    return render_template("results.html", form36=request.form['form36'], form38=request.form['form38'], form39=request.form['form39'], form40=request.form['form40'], form42=request.form['form42'])
 
 if __name__ == '__main__':
     app.run()
