@@ -13,7 +13,7 @@ def demo():
 
 @app.route('/results', methods=['POST'])
 def results():
-    return (request.form['projectFilePath'])
+    return (request.form['demoform'])
 
 if __name__ == '__main__':
     app.run()
