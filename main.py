@@ -9,15 +9,11 @@ def home():
 
 @app.route("/demo")
 def demo():
-    return render_template("demo.html", methods=['GET', 'POST'])
+    return render_template("demo.html")
 
-@app.route("/results.html")
-def results():
-    return render_template("results.html")
-
-@app.route('/results.html', methods=['GET', 'POST'])
-def result():
-    return render_template("results.html", form36=request.form['form36'], form38=request.form['form38'], form39=request.form['form39'], form40=request.form['form40'], form42=request.form['form42'])
+@app.route('/results', methods=['POST'])
+def addRegion():
+    return (request.form['projectFilePath'])
 
 if __name__ == '__main__':
     app.run()
